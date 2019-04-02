@@ -36,8 +36,9 @@ func fiboDynamically(n: Int) -> Int {
     }
     
     for _ in 0...(n - 2) {
+        let prev = fibo1
         fibo1 = fibo2
-        fibo2 = fibo2 + fibo1
+        fibo2 = fibo1 + prev
     }
     
     return fibo2
