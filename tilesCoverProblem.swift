@@ -1,3 +1,17 @@
+//
+// create data structure to represent tile that can be 
+// white, black or is devided into 4 smaller tiles (in fractal manner).
+//
+// write method to merge two tiles bearing in mind those rules:
+// if part of a first tile is black and corresponding part of a second 
+// tile is white then corresponding part of a tile after merge will be black:
+// 1.(black + white = black)
+// In the same way: 
+// 2. (white + white = white)
+// 3. (black + black = black)
+//
+
+
 import Foundation
 
 enum NodeType {
@@ -10,7 +24,7 @@ class Node {
     var children: [Node]
     var type: NodeType
     
-    class func add(f: Node, s: Node) -> Node {
+    class func merge(f: Node, s: Node) -> Node {
         
         switch (f.type, s.type) {
         case (.white, _):
